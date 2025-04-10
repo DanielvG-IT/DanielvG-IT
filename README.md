@@ -1,5 +1,5 @@
 # Welcome to my GitHub! 👋
-I'm **Daniel van Ginneken**, an aspiring software developer with a passion for creating innovative projects and exploring new technologies. I'm currently studying at **Avans Hogeschool**, building my skills in software development and working on exciting projects along the way.
+I'm **Daniel van Ginneken**, an aspiring software developer with a passion for creating innovative projects and exploring new technologies. I'm currently studying at **Avans University of applied sciences**, building my skills in software development and working on exciting projects along the way.
 
 ---
 
