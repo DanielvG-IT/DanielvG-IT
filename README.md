@@ -11,13 +11,6 @@ I’m Daniel van Ginneken, a software development student at Avans University of
 
 ---
 
-## 🌟 Featured Projects
-- [**First-Personal-Portfolio**](https://github.com/DanielvG-IT/First-Personal-Portfolio): My first ever project, building my own website.  
-- [**SaaS-Landing-Page**](https://github.com/DanielvG-IT/SaaS-Landing-Page): WIP! Template(s) for a nice SaaS landing page.  
-
-
----
-
 ## 📊 GitHub Stats
 ![GitHub Streak](https://streak-stats.demolab.com/?user=DanielvG-IT&theme=dark)  
 
@@ -56,14 +49,13 @@ I’m Daniel van Ginneken, a software development student at Avans University of
 
 ---
 
-## 🏆 Achievements
 ![GitHub Contributions](https://github-readme-activity-graph.vercel.app/graph?username=DanielvG-IT&theme=dark)  
 
 ---
 
 ## 🤝 Let's Connect
 - 💼 [LinkedIn](https://www.linkedin.com/in/daniel-v-ginneken/)  
-- 🌍 [Website](https://x.com/your-handle)  
+- 🌍 [Website](https://danielvanginneken.nl)  
 - 📧 **[daniel@danielvanginneken.nl](mailto:daniel@danielvanginneken.nl)**  
 
 ---
