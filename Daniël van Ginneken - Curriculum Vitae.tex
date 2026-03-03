@@ -15,6 +15,8 @@
 \usepackage{tabularx}
 \usepackage{parskip}
 \usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{tikz}
 \usepackage{charter}
 \usepackage[scaled=0.92]{helvet}
 
@@ -56,15 +58,24 @@
 % ═══════════════════════════════════════════════════════════
 % HEADER
 % ═══════════════════════════════════════════════════════════
-\begin{center}
-  {\Huge\bfseries\sffamily\color{accent} Daniël van Ginneken}\\\vspace{6pt}
+\noindent
+\begin{minipage}[c]{0.78\textwidth}
+  {\Huge\bfseries\sffamily\color{accent} Daniël van Ginneken}\\[6pt]
   \contactitem{\faMapMarker*}{Oudenbosch, Netherlands}\;\;$\cdot$\;\;%
   \contactitem{\faEnvelope}{\href{mailto:dcjvanginneken@gmail.com}{dcjvanginneken@gmail.com}}\;\;$\cdot$\;\;%
   \contactitem{\faPhone*}{Available on request}\\[3pt]
   \contactitem{\faLinkedin}{\href{https://linkedin.com/in/daniel-vginneken}{linkedin.com/in/daniel-vginneken}}\;\;$\cdot$\;\;%
   \contactitem{\faGlobe}{\href{https://danielvanginneken.nl}{danielvanginneken.nl}}\;\;$\cdot$\;\;%
   \contactitem{\faGithub}{\href{https://github.com/DanielvG-IT}{github.com/DanielvG-IT}}
-\end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.18\textwidth}
+  \raggedleft
+  \begin{tikzpicture}
+    \clip circle (1.4cm);
+    \node {\includegraphics[width=2.8cm]{./assets/picture.png}};
+  \end{tikzpicture}
+\end{minipage}
 
 \vspace{-2pt}
 
@@ -74,7 +85,7 @@
 \section{Profile}
 
 Computer Science student with 3+ years of practical experience in infrastructure, networking, and system administration.  
-Currently specialising in fullstack development using .NET 8 and React.  
+Building REST APIs with ASP.NET Core and frontend applications with React and TypeScript.  
 Seeking a Fullstack Developer internship.
 
 % ═══════════════════════════════════════════════════════════
@@ -89,7 +100,7 @@ Seeking a Fullstack Developer internship.
   \item Administer Linux servers and Proxmox virtualisation environments
   \item Configure Cisco switching, VLANs, and routing
   \item Deploy and support 3CX PBX systems and Yealink endpoints
-  \item Automate tasks using PowerShell and Bash
+  \item Automated tasks using PowerShell and Bash, reducing manual configuration time.
 \end{itemize}
 
 \vspace{4pt}
@@ -116,19 +127,38 @@ Seeking a Fullstack Developer internship.
 \cventry{MBO Niveau 4 BBL -- ICT System \& Devices Engineer}{Sep 2022 -- Jun 2024}%
         {Curio, Breda}{}
 
-% ═══════════════════════════════════════════════════════════
+% ═══════════════════════════════════════════════════════════% 
+% PROJECTS & PORTFOLIO
+% ═════════════════════════════════════════════════════════
+\section{Projects \& Portfolio}
+
+\cvsimple{Portfolio Website --- danielvanginneken.nl}{2025}
+\begin{itemize}
+  \item Personal portfolio built with React and deployed via docker
+\end{itemize}
+
+\vspace{4pt}
+
+% ═════════════════════════════════════════════════════════% 
 % TECHNICAL SKILLS
 % ═══════════════════════════════════════════════════════════
 \section{Technical Skills}
 
 \begin{tabularx}{\textwidth}{@{}>{\bfseries\small}l@{\hspace{8pt}}X@{}}
-Fullstack Development & C\# / .NET 8, ASP.NET Core, React, TypeScript, JavaScript, REST APIs, Entity Framework, SQL Server, PostgreSQL, Docker, Git, CI/CD, Azure \\[3pt]
+Fullstack Development & C\# / .NET 10, ASP.NET Core, React, TypeScript, JavaScript, REST APIs, Entity Framework, SQL Server, PostgreSQL, Docker, Git, CI/CD, Azure \\[3pt]
 Infrastructure        & Windows Server, Active Directory, Linux, Proxmox, VMware, Hyper-V, DNS, DHCP, PowerShell, Bash \\[3pt]
 Networking            & Cisco IOS, VLANs, Routing, Firewalls, VPN, TCP/IP, 3CX PBX \\[3pt]
 Tools                 & Agile / Scrum, Jira, Figma, ITIL basics \\
 \end{tabularx}
 
-% ═══════════════════════════════════════════════════════════
+% ═══════════════════════════════════════════════════════════% 
+% SOFT SKILLS
+% ═════════════════════════════════════════════════════════
+\section{Soft Skills}
+
+Problem-solving \;$\cdot$\; Team collaboration \;$\cdot$\; Communication \;$\cdot$\; Adaptability \;$\cdot$\; Time management \;$\cdot$\; Eager to learn 
+
+% ═════════════════════════════════════════════════════════% 
 % CERTIFICATIONS
 % ═══════════════════════════════════════════════════════════
 \section{Certifications}
