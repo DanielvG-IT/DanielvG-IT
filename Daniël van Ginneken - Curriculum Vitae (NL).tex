@@ -1,0 +1,180 @@
+%──────────────────────────────────────────────────────────────
+%  CV — Daniël van Ginneken (Nederlands)
+%──────────────────────────────────────────────────────────────
+\documentclass[a4paper,10pt]{article}
+
+% ── Packages ─────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.55in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{charter}
+\usepackage[scaled=0.92]{helvet}
+
+% ── Colours ──────────────────────────────────────────────────
+\definecolor{accent}{HTML}{1A5276}
+\definecolor{lightgray}{HTML}{666666}
+\definecolor{ruleclr}{HTML}{CCCCCC}
+
+% ── Hyperlinks ───────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Daniël van Ginneken},
+  pdftitle={CV — Daniël van Ginneken},
+}
+
+% ── Section formatting ───────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{accent}\sffamily}
+  {}{0pt}{\MakeUppercase}[\vspace{-4pt}\textcolor{ruleclr}{\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ── Custom commands ──────────────────────────────────────────
+\newcommand{\cventry}[4]{%
+  {\textbf{#1}}\hfill{\small\color{lightgray}#2}\\
+  {\textit{#3}}\hfill{\small\color{lightgray}#4}\vspace{2pt}%
+}
+\newcommand{\cvsimple}[2]{%
+  {\textbf{#1}}\hfill{\small\color{lightgray}#2}\vspace{1pt}%
+}
+\newcommand{\contactitem}[2]{\mbox{#1\,\small #2}}
+
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=14pt, itemsep=0pt, parsep=0pt, topsep=2pt}
+
+\begin{document}
+
+% ═══════════════════════════════════════════════════════════
+% HEADER
+% ═══════════════════════════════════════════════════════════
+\noindent
+\begin{minipage}[c]{0.78\textwidth}
+  {\Huge\bfseries\sffamily\color{accent} Daniël van Ginneken}\\[6pt]
+  \contactitem{\faMapMarker*}{Oudenbosch, Nederland}\;\;$\cdot$\;\;%
+  \contactitem{\faEnvelope}{\href{mailto:dcjvanginneken@gmail.com}{dcjvanginneken@gmail.com}}\;\;$\cdot$\;\;%
+  \contactitem{\faPhone*}{Beschikbaar op aanvraag}\\[3pt]
+  \contactitem{\faLinkedin}{\href{https://linkedin.com/in/daniel-vginneken}{linkedin.com/in/daniel-vginneken}}\;\;$\cdot$\;\;%
+  \contactitem{\faGlobe}{\href{https://danielvanginneken.nl}{danielvanginneken.nl}}\;\;$\cdot$\;\;%
+  \contactitem{\faGithub}{\href{https://github.com/DanielvG-IT}{github.com/DanielvG-IT}}
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.18\textwidth}
+  \raggedleft
+  \begin{tikzpicture}
+    \clip circle (1.4cm);
+    \node {\includegraphics[width=2.8cm]{./assets/picture.png}};
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{-2pt}
+
+% ═══════════════════════════════════════════════════════════
+% PROFIEL
+% ═══════════════════════════════════════════════════════════
+\section{Profiel}
+
+Informatica-student met 3+ jaar praktijkervaring in infrastructuur, netwerken en systeembeheer.  
+Bouwt REST API's met ASP.NET Core en frontendapplicaties met React en TypeScript.  
+Op zoek naar een stage als Fullstack Developer.
+
+% ═══════════════════════════════════════════════════════════
+% WERKERVARING
+% ═══════════════════════════════════════════════════════════
+\section{Werkervaring}
+
+\cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
+        {System Support Engineer $\cdot$ Parttime}{mei 2024 -- heden}
+\begin{itemize}
+  \item Beheer van Windows Server, Active Directory en Group Policy omgevingen
+  \item Beheer van Linux-servers en Proxmox-virtualisatieomgevingen
+  \item Configuratie van Cisco-switching, VLAN's en routing
+  \item Implementatie en ondersteuning van 3CX PBX-systemen en Yealink-endpoints
+  \item Automatisering van taken met PowerShell en Bash, waardoor handmatige configuratietijd is verminderd
+\end{itemize}
+
+\vspace{4pt}
+
+\cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
+        {Junior Support Engineer $\cdot$ BBL}{nov 2022 -- mei 2024}
+\begin{itemize}
+  \item Oplossen van hardware-, software- en telefonieincidenten via ticketsystemen
+  \item Beheer van gebruikersaccounts, werkstations en systeemconfiguraties
+\end{itemize}
+
+% ═══════════════════════════════════════════════════════════
+% OPLEIDING
+% ═══════════════════════════════════════════════════════════
+\section{Opleiding}
+
+\cventry{Bachelor of Applied Science -- Informatica}{sep 2024 -- jun 2028}%
+        {Avans Hogeschool, Breda}{}
+\vspace{-1pt}
+{\small Focus: .NET, React, Agile, Cloud \& DevOps}
+
+\vspace{4pt}
+
+\cventry{MBO Niveau 4 BBL -- ICT Systeem- \& Devicetechnicus}{sep 2022 -- jun 2024}%
+        {Curio, Breda}{}
+
+% ═══════════════════════════════════════════════════════════% 
+% PROJECTEN & PORTFOLIO
+% ═════════════════════════════════════════════════════════
+\section{Projecten \& Portfolio}
+
+\cvsimple{Portfolio Website --- danielvanginneken.nl}{2025}
+\begin{itemize}
+  \item Persoonlijke portfolio gebouwd met React en gedeployed via Docker
+\end{itemize}
+
+\vspace{4pt}
+
+% ═════════════════════════════════════════════════════════% 
+% TECHNISCHE VAARDIGHEDEN
+% ═══════════════════════════════════════════════════════════
+\section{Technische Vaardigheden}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\small}l@{\hspace{8pt}}X@{}}
+Fullstack Development & C\# / .NET 10, ASP.NET Core, React, TypeScript, JavaScript, REST APIs, Entity Framework, SQL Server, PostgreSQL, Docker, Git, CI/CD, Azure \\[3pt]
+Infrastructuur        & Windows Server, Active Directory, Linux, Proxmox, VMware, Hyper-V, DNS, DHCP, PowerShell, Bash \\[3pt]
+Netwerken             & Cisco IOS, VLAN's, Routing, Firewalls, VPN, TCP/IP, 3CX PBX \\[3pt]
+Tools                 & Agile / Scrum, Jira, Figma, ITIL-basis \\
+\end{tabularx}
+
+% ═══════════════════════════════════════════════════════════% 
+% SOFT SKILLS
+% ═════════════════════════════════════════════════════════
+\section{Soft Skills}
+
+Probleemoplossend vermogen \;$\cdot$\; Samenwerking \;$\cdot$\; Communicatie \;$\cdot$\; Aanpassingsvermogen \;$\cdot$\; Tijdmanagement \;$\cdot$\; Leergierig 
+
+% ═════════════════════════════════════════════════════════% 
+% CERTIFICERINGEN
+% ═══════════════════════════════════════════════════════════
+\section{Certificeringen}
+
+\begin{itemize}[leftmargin=12pt]
+  \item Microsoft 365 Certified: Fundamentals (MS-900)
+  \item 3CX Advanced Certified Engineer
+  \item Yealink Junior Certified IP Phone Engineer
+\end{itemize}
+
+% ═══════════════════════════════════════════════════════════
+% TALEN
+% ═══════════════════════════════════════════════════════════
+\section{Talen}
+
+Nederlands --- Moedertaal\\
+Engels --- Professioneel werkend
+
+\end{document}
