@@ -1,0 +1,150 @@
+%──────────────────────────────────────────────────────────────
+%  CV — Daniël van Ginneken
+%──────────────────────────────────────────────────────────────
+\documentclass[a4paper,10pt]{article}
+
+% ── Packages ─────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.55in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage{charter}
+\usepackage[scaled=0.92]{helvet}
+
+% ── Colours ──────────────────────────────────────────────────
+\definecolor{accent}{HTML}{1A5276}
+\definecolor{lightgray}{HTML}{666666}
+\definecolor{ruleclr}{HTML}{CCCCCC}
+
+% ── Hyperlinks ───────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Daniël van Ginneken},
+  pdftitle={CV — Daniël van Ginneken},
+}
+
+% ── Section formatting ───────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{accent}\sffamily}
+  {}{0pt}{\MakeUppercase}[\vspace{-4pt}\textcolor{ruleclr}{\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% ── Custom commands ──────────────────────────────────────────
+\newcommand{\cventry}[4]{%
+  {\textbf{#1}}\hfill{\small\color{lightgray}#2}\\
+  {\textit{#3}}\hfill{\small\color{lightgray}#4}\vspace{2pt}%
+}
+\newcommand{\cvsimple}[2]{%
+  {\textbf{#1}}\hfill{\small\color{lightgray}#2}\vspace{1pt}%
+}
+\newcommand{\contactitem}[2]{\mbox{#1\,\small #2}}
+
+\pagestyle{empty}
+\setlist[itemize]{leftmargin=14pt, itemsep=0pt, parsep=0pt, topsep=2pt}
+
+\begin{document}
+
+% ═══════════════════════════════════════════════════════════
+% HEADER
+% ═══════════════════════════════════════════════════════════
+\begin{center}
+  {\Huge\bfseries\sffamily\color{accent} Daniël van Ginneken}\\\vspace{6pt}
+  \contactitem{\faMapMarker*}{Oudenbosch, Netherlands}\;\;$\cdot$\;\;%
+  \contactitem{\faEnvelope}{\href{mailto:dcjvanginneken@gmail.com}{dcjvanginneken@gmail.com}}\;\;$\cdot$\;\;%
+  \contactitem{\faPhone*}{Available on request}\\[3pt]
+  \contactitem{\faLinkedin}{\href{https://linkedin.com/in/daniel-vginneken}{linkedin.com/in/daniel-vginneken}}\;\;$\cdot$\;\;%
+  \contactitem{\faGlobe}{\href{https://danielvanginneken.nl}{danielvanginneken.nl}}\;\;$\cdot$\;\;%
+  \contactitem{\faGithub}{\href{https://github.com/DanielvG-IT}{github.com/DanielvG-IT}}
+\end{center}
+
+\vspace{-2pt}
+
+% ═══════════════════════════════════════════════════════════
+% PROFILE
+% ═══════════════════════════════════════════════════════════
+\section{Profile}
+
+Computer Science student with 3+ years of practical experience in infrastructure, networking, and system administration.  
+Currently specialising in fullstack development using .NET 8 and React.  
+Seeking a Fullstack Developer internship.
+
+% ═══════════════════════════════════════════════════════════
+% EXPERIENCE
+% ═══════════════════════════════════════════════════════════
+\section{Experience}
+
+\cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
+        {System Support Engineer}{May 2024 -- Present}
+\begin{itemize}
+  \item Manage Windows Server, Active Directory, and Group Policy environments
+  \item Administer Linux servers and Proxmox virtualisation environments
+  \item Configure Cisco switching, VLANs, and routing
+  \item Deploy and support 3CX PBX systems and Yealink endpoints
+  \item Automate tasks using PowerShell and Bash
+\end{itemize}
+
+\vspace{4pt}
+
+\cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
+        {Junior Support Engineer}{Nov 2022 -- May 2024}
+\begin{itemize}
+  \item Resolved hardware, software, and telephony incidents via ticketing systems
+  \item Managed user accounts, workstations, and system configurations
+\end{itemize}
+
+% ═══════════════════════════════════════════════════════════
+% EDUCATION
+% ═══════════════════════════════════════════════════════════
+\section{Education}
+
+\cventry{Bachelor of Applied Science -- Computer Science}{Sep 2024 -- Jun 2028}%
+        {Avans University of Applied Sciences, Breda}{}
+\vspace{-1pt}
+{\small Focus: .NET, React, Agile, Cloud \& DevOps}
+
+\vspace{4pt}
+
+\cventry{MBO Niveau 4 BBL -- ICT System \& Devices Engineer}{Sep 2022 -- Jun 2024}%
+        {Curio, Breda}{}
+
+% ═══════════════════════════════════════════════════════════
+% TECHNICAL SKILLS
+% ═══════════════════════════════════════════════════════════
+\section{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\small}l@{\hspace{8pt}}X@{}}
+Fullstack Development & C\# / .NET 8, ASP.NET Core, React, TypeScript, JavaScript, REST APIs, Entity Framework, SQL Server, PostgreSQL, Docker, Git, CI/CD, Azure \\[3pt]
+Infrastructure        & Windows Server, Active Directory, Linux, Proxmox, VMware, Hyper-V, DNS, DHCP, PowerShell, Bash \\[3pt]
+Networking            & Cisco IOS, VLANs, Routing, Firewalls, VPN, TCP/IP, 3CX PBX \\[3pt]
+Tools                 & Agile / Scrum, Jira, Figma, ITIL basics \\
+\end{tabularx}
+
+% ═══════════════════════════════════════════════════════════
+% CERTIFICATIONS
+% ═══════════════════════════════════════════════════════════
+\section{Certifications}
+
+\begin{itemize}[leftmargin=12pt]
+  \item Microsoft 365 Certified: Fundamentals (MS-900)
+  \item 3CX Advanced Certified Engineer
+  \item Yealink Junior Certified IP Phone Engineer
+\end{itemize}
+
+% ═══════════════════════════════════════════════════════════
+% LANGUAGES
+% ═══════════════════════════════════════════════════════════
+\section{Languages}
+
+Dutch --- Native\\
+English --- Professional Working
+
+\end{document}
