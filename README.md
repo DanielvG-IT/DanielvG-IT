@@ -1,6 +1,6 @@
 # Daniël van Ginneken
 
-Backend and infrastructure engineer based in the Netherlands.  
+Software developer focused on backend systems and infrastructure, based in the Netherlands.  
 I build distributed systems, backend APIs, and the infrastructure they run on.
 
 ---
@@ -16,7 +16,7 @@ Working part-time as a System Support Engineer at [Dentech](https://dentech.nl) 
 ### [PatientPingeling](https://github.com/DanielvG-IT/PatientPingeling)
 *Multi-tenant notification platform — ASP.NET Core · RabbitMQ · PostgreSQL · OpenTelemetry*
 
-Event-driven notification dispatch system that routes messages across multiple providers (email, SMS, push). Designed around clean architecture with per-tenant configuration, asynchronous message processing via RabbitMQ, full OpenTelemetry instrumentation for distributed tracing and metrics, and provider abstraction through the factory pattern. Deployed via Docker Compose.
+Event-driven notification dispatch system that routes messages across multiple providers (email, SMS, push). Designed around clean architecture with per-tenant configuration, asynchronous message processing via RabbitMQ, a provider abstraction layer for pluggable notification providers, and distributed tracing, metrics and structured logging through OpenTelemetry. Deployed via Docker Compose.
 
 ### Homelab
 *Self-hosted infrastructure — Proxmox · Linux · Docker · VLANs · Monitoring*
@@ -32,7 +32,7 @@ Backend        C# / .NET, ASP.NET Core, Entity Framework Core
 Messaging      RabbitMQ
 Databases      PostgreSQL, SQL Server
 Frontend       React, TypeScript
-Observability  OpenTelemetry, structured logging, distributed tracing
+Observability  OpenTelemetry, metrics, tracing, structured logging
 Infra          Linux, Proxmox, Docker, Cisco IOS
 Networking     VLANs, routing, firewalls, DNS/DHCP
 Automation     PowerShell, Bash
