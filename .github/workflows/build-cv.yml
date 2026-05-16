@@ -1,11 +1,6 @@
 name: Build & Release CV
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '**.tex'
-      - 'assets/**'
   workflow_dispatch:
     inputs:
       bump:
