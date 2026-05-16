@@ -17,13 +17,13 @@
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{lmodern}
+\usepackage{charter}
+\usepackage[scaled=0.92]{helvet}
 
 % ── Colours ──────────────────────────────────────────────────
-\definecolor{accent}{HTML}{1B2A4A}
-\definecolor{lightgray}{HTML}{555555}
+\definecolor{accent}{HTML}{1A5276}
+\definecolor{lightgray}{HTML}{666666}
 \definecolor{ruleclr}{HTML}{CCCCCC}
-\definecolor{taggray}{HTML}{888888}
 
 % ── Hyperlinks ───────────────────────────────────────────────
 \hypersetup{
@@ -36,14 +36,14 @@
 
 % ── Section formatting ───────────────────────────────────────
 \titleformat{\section}
-  {\normalsize\bfseries\color{accent}\sffamily}
-  {}{0pt}{\MakeUppercase}[\vspace{2pt}\textcolor{ruleclr}{\rule{\linewidth}{0.5pt}}]
-\titlespacing*{\section}{0pt}{10pt}{4pt}
+  {\large\bfseries\color{accent}\sffamily}
+  {}{0pt}{\MakeUppercase}[\vspace{-4pt}\textcolor{ruleclr}{\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
 
 % ── Custom commands ──────────────────────────────────────────
 \newcommand{\cventry}[4]{%
   {\textbf{#1}}\hfill{\small\color{lightgray}#2}\\
-  {\small\color{lightgray}\textit{#3}}\hfill{\small\color{lightgray}#4}\vspace{2pt}%
+  {\textit{#3}}\hfill{\small\color{lightgray}#4}\vspace{2pt}%
 }
 \newcommand{\cvsimple}[2]{%
   {\textbf{#1}}\hfill{\small\color{lightgray}#2}\vspace{1pt}%
@@ -51,7 +51,7 @@
 \newcommand{\contactitem}[2]{\mbox{#1\,\small #2}}
 
 \pagestyle{empty}
-\setlist[itemize]{leftmargin=14pt, itemsep=1pt, parsep=0pt, topsep=2pt}
+\setlist[itemize]{leftmargin=14pt, itemsep=0pt, parsep=0pt, topsep=2pt}
 
 \begin{document}
 
@@ -60,10 +60,11 @@
 % ═══════════════════════════════════════════════════════════
 \noindent
 \begin{minipage}[c]{0.78\textwidth}
-  {\LARGE\bfseries\sffamily\color{accent} Daniël van Ginneken}\\[5pt]
-  {\small\color{lightgray}Backend-gerichte softwareontwikkelaar · Oudenbosch, Nederland}\\[5pt]
+  {\Huge\bfseries\sffamily\color{accent} Daniël van Ginneken}\\[6pt]
+  \contactitem{\faMapMarker*}{Oudenbosch, Nederland}\;\;$\cdot$\;\;%
   \contactitem{\faEnvelope}{\href{mailto:dcjvanginneken@gmail.com}{dcjvanginneken@gmail.com}}\;\;$\cdot$\;\;%
-  \contactitem{\faLinkedin}{\href{https://linkedin.com/in/daniel-vginneken}{linkedin.com/in/daniel-vginneken}}\\[2pt]
+  \contactitem{\faPhone*}{Beschikbaar op aanvraag}\\[3pt]
+  \contactitem{\faLinkedin}{\href{https://linkedin.com/in/daniel-vginneken}{linkedin.com/in/daniel-vginneken}}\;\;$\cdot$\;\;%
   \contactitem{\faGlobe}{\href{https://danielvanginneken.nl}{danielvanginneken.nl}}\;\;$\cdot$\;\;%
   \contactitem{\faGithub}{\href{https://github.com/DanielvG-IT}{github.com/DanielvG-IT}}
 \end{minipage}%
@@ -71,12 +72,12 @@
 \begin{minipage}[c]{0.18\textwidth}
   \raggedleft
   \begin{tikzpicture}
-    \clip circle (1.3cm);
-    \node {\includegraphics[width=2.6cm]{./assets/picture.png}};
+    \clip circle (1.4cm);
+    \node {\includegraphics[width=2.8cm]{./assets/picture.png}};
   \end{tikzpicture}
 \end{minipage}
 
-\vspace{4pt}
+\vspace{-2pt}
 
 % ═══════════════════════════════════════════════════════════
 % PROFIEL
@@ -93,21 +94,23 @@ Studeert momenteel Informatica (HBO) aan Avans Hogeschool en werkt parttime als 
 \section{Werkervaring}
 
 \cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
-        {System Support Engineer · Parttime}{mei 2024 -- heden}
+        {System Support Engineer $\cdot$ Parttime}{mei 2024 -- heden}
 \begin{itemize}
-  \item Beheer van multi-site netwerkinfrastructuur voor 10+ zakelijke klanten via Cisco-switching, VLAN-segmentatie, inter-VLAN routing en firewallbeleid
-  \item Beheer van Linux- en Windows Server-omgevingen (Active Directory, Group Policy, DNS/DHCP) en verkorting van provisioning-doorlooptijd met PowerShell- en Bash-automatisering
-  \item Implementatie en beheer van Proxmox-virtualisatieclusters met productie-workloads voor klantomgevingen
-  \item Leiding over uitrol en configuratie van 3CX PBX-systemen en VoIP-infrastructuur bij nieuwe klantimplementaties
+  \item Ontwerp en beheer van multi-site netwerkinfrastructuur: Cisco-switching, VLAN-segmentatie, inter-VLAN routing en firewallbeleid
+  \item Beheer van Linux- en Windows Server-omgevingen (Active Directory, Group Policy, DNS/DHCP) voor meerdere zakelijke klanten
+  \item Implementatie en beheer van Proxmox-virtualisatieclusters met productie-workloads
+  \item Automatisering van provisioning- en configuratietaken met PowerShell en Bash, waardoor repetitieve handmatige stappen worden geëlimineerd
+  \item Leiding over implementatie en configuratie van 3CX PBX-systemen en VoIP-infrastructuur bij klanten
 \end{itemize}
 
 \vspace{4pt}
 
 \cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
-        {Junior Support Engineer · BBL}{nov 2022 -- mei 2024}
+        {Junior Support Engineer $\cdot$ BBL}{nov 2022 -- mei 2024}
 \begin{itemize}
-  \item Oplossen van hardware-, software- en VoIP-incidenten in meerdere klantomgevingen, naast het afronden van MBO Niveau 4 ICT Systeem- \& Devicetechnicus
-  \item Ondersteuning van Windows Server en Active Directory; opbouw van kerninfrastructuurvaardigheden onder begeleiding van senior collega's
+  \item Oplossen van hardware-, software- en VoIP-incidenten in meerdere klantomgevingen
+  \item Ondersteuning van Windows Server, Active Directory en werkstationbeheer onder begeleiding van senior collega's
+  \item Ontwikkeling van kerninfrastructuurvaardigheden tijdens het afronden van MBO Niveau 4 ICT Systeem- \& Devicetechnicus
 \end{itemize}
 
 % ═══════════════════════════════════════════════════════════
@@ -115,12 +118,12 @@ Studeert momenteel Informatica (HBO) aan Avans Hogeschool en werkt parttime als 
 % ═══════════════════════════════════════════════════════════
 \section{Projecten}
 
-\cvsimple{PatientPingeling \textnormal{\small\color{taggray}--- \href{https://github.com/PatientPingeling/PatientPingeling}{github.com/PatientPingeling/PatientPingeling}}}{2024 -- heden}
+\cvsimple{PatientPingeling \textnormal{\small\color{lightgray}--- \href{https://github.com/PatientPingeling/PatientPingeling}{github.com/PatientPingeling/PatientPingeling}}}{2024 -- heden}
 \begin{itemize}
-  \item Gebouwd een multi-tenant notificatieplatform met ASP.NET Core, PostgreSQL en RabbitMQ voor berichtrouting via e-mail, SMS en push
-  \item Ontworpen provider-abstractielaag voor pluggable notificatieproviders met per-tenant configuratie, zodat nieuwe kanalen geen aanpassingen in de kerndispatch vereisen
-  \item Notificatieverzending ontkoppeld van de request lifecycle via RabbitMQ-backgroundconsumers, wat de betrouwbaarheid onder belasting verbetert
-  \item Gedistribueerde tracing, metrics en gestructureerde logging toegevoegd via OpenTelemetry; gedeployed via Docker Compose
+  \item Multi-tenant notificatieplatform gebouwd met ASP.NET Core, PostgreSQL en RabbitMQ
+  \item Clean architecture met een provider-abstractielaag voor pluggable notificatieproviders (e-mail, SMS, push) en per-tenant configuratie
+  \item Asynchrone berichtverwerking via RabbitMQ, waarmee notificatieverzending wordt losgekoppeld van de request lifecycle
+  \item Gedistribueerde tracing, metrics en gestructureerde logging via OpenTelemetry; gedeployed via Docker Compose
 \end{itemize}
 
 \vspace{4pt}
@@ -131,11 +134,28 @@ Studeert momenteel Informatica (HBO) aan Avans Hogeschool en werkt parttime als 
 \end{itemize}
 
 % ═══════════════════════════════════════════════════════════
+% OPLEIDING
+% ═══════════════════════════════════════════════════════════
+\section{Opleiding}
+
+\cventry{Bachelor of Applied Science -- Informatica (HBO)}{sep 2024 -- jun 2028}%
+        {Avans Hogeschool, Breda}{}
+\vspace{-1pt}
+{\small Focus: .NET, React, Agile, Cloud \& DevOps}
+
+\vspace{4pt}
+
+\cventry{MBO Niveau 4 BBL -- ICT Systeem- \& Devicetechnicus}{sep 2022 -- jun 2024}%
+        {Curio, Breda}{}
+\vspace{-1pt}
+{\small Versneld duaal traject: fulltime werkzaam bij Dentech gecombineerd met formele ICT-systeemopleiding}
+
+% ═══════════════════════════════════════════════════════════
 % TECHNISCHE VAARDIGHEDEN
 % ═══════════════════════════════════════════════════════════
 \section{Technische Vaardigheden}
 
-\begin{tabularx}{\textwidth}{@{}>{\bfseries\small}l@{\hspace{10pt}}X@{}}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\small}l@{\hspace{8pt}}X@{}}
 Backend         & C\# / .NET, ASP.NET Core, Entity Framework Core, REST API's, PostgreSQL, SQL Server \\[3pt]
 Messaging       & RabbitMQ, asynchrone verwerking, event-driven architecturen \\[3pt]
 Frontend        & React, TypeScript, JavaScript \\[3pt]
@@ -155,21 +175,6 @@ Tools           & Git, CI/CD, Azure, Agile / Scrum \\
   \item 3CX Advanced Certified Engineer
   \item Yealink Junior Certified IP Phone Engineer
 \end{itemize}
-
-% ═══════════════════════════════════════════════════════════
-% OPLEIDING
-% ═══════════════════════════════════════════════════════════
-\section{Opleiding}
-
-\cventry{Bachelor of Applied Science -- Informatica (HBO)}{sep 2024 -- jun 2028}%
-        {Avans Hogeschool, Breda}{}
-
-\vspace{4pt}
-
-\cventry{MBO Niveau 4 BBL -- ICT Systeem- \& Devicetechnicus}{sep 2022 -- jun 2024}%
-        {Curio, Breda}{}
-\vspace{-1pt}
-{\small\color{lightgray}Versneld duaal traject: fulltime werkzaam bij Dentech gecombineerd met formele ICT-systeemopleiding}
 
 % ═══════════════════════════════════════════════════════════
 % TALEN

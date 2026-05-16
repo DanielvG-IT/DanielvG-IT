@@ -17,13 +17,13 @@
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{lmodern}
+\usepackage{charter}
+\usepackage[scaled=0.92]{helvet}
 
 % ── Colours ──────────────────────────────────────────────────
-\definecolor{accent}{HTML}{1B2A4A}
-\definecolor{lightgray}{HTML}{555555}
+\definecolor{accent}{HTML}{1A5276}
+\definecolor{lightgray}{HTML}{666666}
 \definecolor{ruleclr}{HTML}{CCCCCC}
-\definecolor{taggray}{HTML}{888888}
 
 % ── Hyperlinks ───────────────────────────────────────────────
 \hypersetup{
@@ -36,14 +36,14 @@
 
 % ── Section formatting ───────────────────────────────────────
 \titleformat{\section}
-  {\normalsize\bfseries\color{accent}\sffamily}
-  {}{0pt}{\MakeUppercase}[\vspace{2pt}\textcolor{ruleclr}{\rule{\linewidth}{0.5pt}}]
-\titlespacing*{\section}{0pt}{10pt}{4pt}
+  {\large\bfseries\color{accent}\sffamily}
+  {}{0pt}{\MakeUppercase}[\vspace{-4pt}\textcolor{ruleclr}{\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
 
 % ── Custom commands ──────────────────────────────────────────
 \newcommand{\cventry}[4]{%
   {\textbf{#1}}\hfill{\small\color{lightgray}#2}\\
-  {\small\color{lightgray}\textit{#3}}\hfill{\small\color{lightgray}#4}\vspace{2pt}%
+  {\textit{#3}}\hfill{\small\color{lightgray}#4}\vspace{2pt}%
 }
 \newcommand{\cvsimple}[2]{%
   {\textbf{#1}}\hfill{\small\color{lightgray}#2}\vspace{1pt}%
@@ -51,7 +51,7 @@
 \newcommand{\contactitem}[2]{\mbox{#1\,\small #2}}
 
 \pagestyle{empty}
-\setlist[itemize]{leftmargin=14pt, itemsep=1pt, parsep=0pt, topsep=2pt}
+\setlist[itemize]{leftmargin=14pt, itemsep=0pt, parsep=0pt, topsep=2pt}
 
 \begin{document}
 
@@ -60,10 +60,11 @@
 % ═══════════════════════════════════════════════════════════
 \noindent
 \begin{minipage}[c]{0.78\textwidth}
-  {\LARGE\bfseries\sffamily\color{accent} Daniël van Ginneken}\\[5pt]
-  {\small\color{lightgray}Backend-focused Software Developer · Oudenbosch, Netherlands}\\[5pt]
+  {\Huge\bfseries\sffamily\color{accent} Daniël van Ginneken}\\[6pt]
+  \contactitem{\faMapMarker*}{Oudenbosch, Netherlands}\;\;$\cdot$\;\;%
   \contactitem{\faEnvelope}{\href{mailto:dcjvanginneken@gmail.com}{dcjvanginneken@gmail.com}}\;\;$\cdot$\;\;%
-  \contactitem{\faLinkedin}{\href{https://linkedin.com/in/daniel-vginneken}{linkedin.com/in/daniel-vginneken}}\\[2pt]
+  \contactitem{\faPhone*}{Available on request}\\[3pt]
+  \contactitem{\faLinkedin}{\href{https://linkedin.com/in/daniel-vginneken}{linkedin.com/in/daniel-vginneken}}\;\;$\cdot$\;\;%
   \contactitem{\faGlobe}{\href{https://danielvanginneken.nl}{danielvanginneken.nl}}\;\;$\cdot$\;\;%
   \contactitem{\faGithub}{\href{https://github.com/DanielvG-IT}{github.com/DanielvG-IT}}
 \end{minipage}%
@@ -71,12 +72,12 @@
 \begin{minipage}[c]{0.18\textwidth}
   \raggedleft
   \begin{tikzpicture}
-    \clip circle (1.3cm);
-    \node {\includegraphics[width=2.6cm]{./assets/picture.png}};
+    \clip circle (1.4cm);
+    \node {\includegraphics[width=2.8cm]{./assets/picture.png}};
   \end{tikzpicture}
 \end{minipage}
 
-\vspace{4pt}
+\vspace{-2pt}
 
 % ═══════════════════════════════════════════════════════════
 % PROFILE
@@ -84,7 +85,7 @@
 \section{Profile}
 
 Backend-focused software developer with 3+ years of production infrastructure experience and a strong interest in distributed systems, event-driven architectures, and backend API design.
-Comfortable across the full deployment stack --- from Cisco/VLAN networking and Linux server administration to ASP.NET Core APIs and message-driven backends.
+Comfortable across the full deployment stack — from Cisco/VLAN networking and Linux server administration to ASP.NET Core APIs and message-driven backends.
 Currently studying Computer Science (HBO) at Avans University while working part-time as a System Support Engineer at Dentech.
 
 % ═══════════════════════════════════════════════════════════
@@ -93,21 +94,23 @@ Currently studying Computer Science (HBO) at Avans University while working part
 \section{Experience}
 
 \cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
-        {System Support Engineer · Part-time}{May 2024 -- Present}
+        {System Support Engineer $\cdot$ Part-time}{May 2024 -- Present}
 \begin{itemize}
-  \item Manage multi-site network infrastructure across 10+ SMB clients using Cisco switching, VLAN segmentation, inter-VLAN routing, and firewall policy
-  \item Administer Linux and Windows Server environments (Active Directory, Group Policy, DNS/DHCP), cutting provisioning time with PowerShell and Bash automation
-  \item Deploy and maintain Proxmox virtualization clusters hosting production workloads for client environments
-  \item Lead rollout and configuration of 3CX PBX systems and VoIP infrastructure for new client deployments
+  \item Design and maintain multi-site network infrastructure: Cisco switching, VLAN segmentation, inter-VLAN routing, and firewall policy
+  \item Administer Linux and Windows Server environments (Active Directory, Group Policy, DNS/DHCP) across multiple SMB client organizations
+  \item Deploy and manage Proxmox virtualization clusters hosting production workloads
+  \item Automate provisioning and configuration workflows with PowerShell and Bash, eliminating repetitive manual steps
+  \item Lead deployment and configuration of 3CX PBX systems and VoIP infrastructure for client rollouts
 \end{itemize}
 
 \vspace{4pt}
 
 \cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
-        {Junior Support Engineer · Work-based learning}{Nov 2022 -- May 2024}
+        {Junior Support Engineer $\cdot$ Work-based learning}{Nov 2022 -- May 2024}
 \begin{itemize}
-  \item Resolved hardware, software, and VoIP incidents across multiple client environments while completing MBO Level 4 ICT Systems \& Device Engineering
-  \item Supported Windows Server and Active Directory environments; built core infrastructure skills under senior guidance
+  \item Resolved hardware, software, and VoIP incidents across multiple client environments
+  \item Supported Windows Server, Active Directory, and workstation management under senior guidance
+  \item Developed core infrastructure skills while completing MBO Level 4 in ICT Systems \& Device Engineering
 \end{itemize}
 
 % ═══════════════════════════════════════════════════════════
@@ -115,12 +118,12 @@ Currently studying Computer Science (HBO) at Avans University while working part
 % ═══════════════════════════════════════════════════════════
 \section{Projects}
 
-\cvsimple{PatientPingeling \textnormal{\small\color{taggray}--- \href{https://github.com/PatientPingeling/PatientPingeling}{github.com/PatientPingeling/PatientPingeling}}}{2026}
+\cvsimple{PatientPingeling \textnormal{\small\color{lightgray}--- \href{https://github.com/PatientPingeling/PatientPingeling}{github.com/PatientPingeling/PatientPingeling}}}{2026}
 \begin{itemize}
-  \item Built a multi-tenant notification platform using ASP.NET Core, PostgreSQL, and RabbitMQ, routing messages across email, SMS, and push channels
-  \item Designed a provider abstraction layer for pluggable notification providers with per-tenant configuration, so adding a new channel requires no changes to core dispatch logic
-  \item Decoupled notification dispatch from the request lifecycle using RabbitMQ background consumers, improving reliability under load
-  \item Added distributed tracing, metrics, and structured logging via OpenTelemetry; deployed via Docker Compose
+  \item Multi-tenant notification platform built with ASP.NET Core, PostgreSQL, and RabbitMQ
+  \item Designed clean architecture with provider abstraction (factory pattern) supporting email, SMS, and push notification channels with per-tenant configuration
+  \item Implemented asynchronous background processing via RabbitMQ, decoupling notification dispatch from the request lifecycle
+  \item Instrumented with OpenTelemetry for distributed tracing, structured logging, and metrics; deployed via Docker Compose
 \end{itemize}
 
 \vspace{4pt}
@@ -131,11 +134,28 @@ Currently studying Computer Science (HBO) at Avans University while working part
 \end{itemize}
 
 % ═══════════════════════════════════════════════════════════
+% EDUCATION
+% ═══════════════════════════════════════════════════════════
+\section{Education}
+
+\cventry{Bachelor of Applied Science -- Computer Science (HBO)}{Sep 2024 -- Jun 2028}%
+        {Avans University of Applied Sciences, Breda}{}
+\vspace{-1pt}
+{\small Focus: .NET, React, Agile, Cloud \& DevOps}
+
+\vspace{4pt}
+
+\cventry{MBO Level 4 BBL -- ICT Systems \& Device Engineering}{Sep 2022 -- Jun 2024}%
+        {Curio, Breda}{}
+\vspace{-1pt}
+{\small Accelerated dual-track program combining full-time work at Dentech with formal ICT systems education}
+
+% ═══════════════════════════════════════════════════════════
 % TECHNICAL SKILLS
 % ═══════════════════════════════════════════════════════════
 \section{Technical Skills}
 
-\begin{tabularx}{\textwidth}{@{}>{\bfseries\small}l@{\hspace{10pt}}X@{}}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\small}l@{\hspace{8pt}}X@{}}
 Backend         & C\# / .NET, ASP.NET Core, Entity Framework Core, REST APIs, PostgreSQL, SQL Server \\[3pt]
 Messaging       & RabbitMQ, asynchronous processing, event-driven architectures \\[3pt]
 Frontend        & React, TypeScript, JavaScript \\[3pt]
@@ -155,21 +175,6 @@ Tools           & Git, CI/CD, Azure, Agile / Scrum \\
   \item 3CX Advanced Certified Engineer
   \item Yealink Junior Certified IP Phone Engineer
 \end{itemize}
-
-% ═══════════════════════════════════════════════════════════
-% EDUCATION
-% ═══════════════════════════════════════════════════════════
-\section{Education}
-
-\cventry{Bachelor of Applied Science -- Computer Science (HBO)}{Sep 2024 -- Jun 2028}%
-        {Avans University of Applied Sciences, Breda}{}
-
-\vspace{4pt}
-
-\cventry{MBO Level 4 BBL -- ICT Systems \& Device Engineering}{Sep 2022 -- Jun 2024}%
-        {Curio, Breda}{}
-\vspace{-1pt}
-{\small\color{lightgray}Accelerated dual-track: full-time at Dentech combined with formal ICT systems education}
 
 % ═══════════════════════════════════════════════════════════
 % LANGUAGES
