@@ -37,6 +37,11 @@ jobs:
               pdflatex -interaction=nonstopmode "Curriculum Vitae (NL).tex"
             '
 
+      - name: Rename outputs
+        run: |
+          mv "Curriculum Vitae (EN).pdf" "CV-DanielvanGinneken-EN.pdf"
+          mv "Curriculum Vitae (NL).pdf" "CV-DanielvanGinneken-NL.pdf"
+
       - name: Determine next version
         id: version
         env:
@@ -64,5 +69,5 @@ jobs:
           body: |
             Built from commit ${{ github.sha }} on `${{ github.ref_name }}`.
           files: |
-            Curriculum Vitae (EN).pdf
-            Curriculum Vitae (NL).pdf
+            CV-DanielvanGinneken-EN.pdf
+            CV-DanielvanGinneken-NL.pdf
