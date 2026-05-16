@@ -84,9 +84,9 @@
 % ═══════════════════════════════════════════════════════════
 \section{Profile}
 
-Computer Science student with 3+ years of practical experience in infrastructure, networking, and system administration.  
-Building REST APIs with ASP.NET Core and frontend applications with React and TypeScript.  
-Seeking a Fullstack Developer internship.
+Backend-focused engineer with 3+ years of production infrastructure experience and a strong interest in distributed systems, event-driven architectures, and backend API design.
+Comfortable across the full deployment stack — from Cisco/VLAN networking and Linux server administration to ASP.NET Core APIs and message-driven backends.
+Currently studying Computer Science (HBO) at Avans University while working part-time as a System Support Engineer at Dentech.
 
 % ═══════════════════════════════════════════════════════════
 % EXPERIENCE
@@ -96,11 +96,11 @@ Seeking a Fullstack Developer internship.
 \cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
         {System Support Engineer $\cdot$ Part-time}{May 2024 -- Present}
 \begin{itemize}
-  \item Manage Windows Server, Active Directory, and Group Policy environments
-  \item Administer Linux servers and Proxmox virtualisation environments
-  \item Configure Cisco switching, VLANs, and routing
-  \item Deploy and support 3CX PBX systems and Yealink endpoints
-  \item Automated tasks using PowerShell and Bash, reducing manual configuration time.
+  \item Design and maintain multi-site network infrastructure: Cisco switching, VLAN segmentation, inter-VLAN routing, and firewall policy
+  \item Administer Linux and Windows Server environments (Active Directory, Group Policy, DNS/DHCP) across multiple SMB client organizations
+  \item Deploy and manage Proxmox virtualization clusters hosting production workloads
+  \item Automate provisioning and configuration workflows with PowerShell and Bash, eliminating repetitive manual steps
+  \item Lead deployment and configuration of 3CX PBX systems and VoIP infrastructure for client rollouts
 \end{itemize}
 
 \vspace{4pt}
@@ -108,8 +108,29 @@ Seeking a Fullstack Developer internship.
 \cventry{Dentech Telecommunicatie, Beveiliging \& Automatisering}{Etten-Leur, NL}%
         {Junior Support Engineer $\cdot$ Work-based learning}{Nov 2022 -- May 2024}
 \begin{itemize}
-  \item Resolved hardware, software, and telephony incidents via ticketing systems
-  \item Managed user accounts, workstations, and system configurations
+  \item Resolved hardware, software, and VoIP incidents across multiple client environments
+  \item Supported Windows Server, Active Directory, and workstation management under senior guidance
+  \item Developed core infrastructure skills while completing MBO Level 4 in ICT Systems \& Device Engineering
+\end{itemize}
+
+% ═══════════════════════════════════════════════════════════
+% PROJECTS
+% ═══════════════════════════════════════════════════════════
+\section{Projects}
+
+\cvsimple{PatientPingeling \textnormal{\small\color{lightgray}--- \href{https://github.com/DanielvG-IT/PatientPingeling}{github.com/DanielvG-IT/PatientPingeling}}}{2024 -- Present}
+\begin{itemize}
+  \item Multi-tenant notification platform built with ASP.NET Core, PostgreSQL, and RabbitMQ
+  \item Designed clean architecture with provider abstraction (factory pattern) supporting email, SMS, and push notification channels with per-tenant configuration
+  \item Implemented asynchronous background processing via RabbitMQ, decoupling notification dispatch from the request lifecycle
+  \item Instrumented with OpenTelemetry for distributed tracing, structured logging, and metrics; deployed via Docker Compose
+\end{itemize}
+
+\vspace{4pt}
+
+\cvsimple{Personal Portfolio --- \href{https://danielvanginneken.nl}{danielvanginneken.nl}}{2025}
+\begin{itemize}
+  \item Personal website built with React and TypeScript; self-hosted via Docker on home infrastructure
 \end{itemize}
 
 % ═══════════════════════════════════════════════════════════
@@ -117,48 +138,33 @@ Seeking a Fullstack Developer internship.
 % ═══════════════════════════════════════════════════════════
 \section{Education}
 
-\cventry{Bachelor of Applied Science -- Computer Science}{Sep 2024 -- Jun 2028}%
+\cventry{Bachelor of Applied Science -- Computer Science (HBO)}{Sep 2024 -- Jun 2028}%
         {Avans University of Applied Sciences, Breda}{}
 \vspace{-1pt}
 {\small Focus: .NET, React, Agile, Cloud \& DevOps}
 
 \vspace{4pt}
 
-\cventry{MBO Niveau 4 BBL -- ICT System \& Devices Engineer}{Sep 2022 -- Jun 2024}%
+\cventry{MBO Level 4 BBL -- ICT Systems \& Device Engineering}{Sep 2022 -- Jun 2024}%
         {Curio, Breda}{}
+\vspace{-1pt}
+{\small Accelerated dual-track program combining full-time work at Dentech with formal ICT systems education}
 
-% ═══════════════════════════════════════════════════════════% 
-% PROJECTS & PORTFOLIO
-% ═════════════════════════════════════════════════════════
-\section{Projects \& Portfolio}
-
-\cvsimple{Portfolio Website --- danielvanginneken.nl}{2025}
-\begin{itemize}
-  \item Personal portfolio built with React and deployed via docker
-\end{itemize}
-
-\vspace{4pt}
-
-% ═════════════════════════════════════════════════════════% 
+% ═══════════════════════════════════════════════════════════
 % TECHNICAL SKILLS
 % ═══════════════════════════════════════════════════════════
 \section{Technical Skills}
 
 \begin{tabularx}{\textwidth}{@{}>{\bfseries\small}l@{\hspace{8pt}}X@{}}
-Fullstack Development & C\# / .NET 10, ASP.NET Core, React, TypeScript, JavaScript, REST APIs, Entity Framework, SQL Server, PostgreSQL, Docker, Git, CI/CD, Azure \\[3pt]
-Infrastructure        & Windows Server, Active Directory, Linux, Proxmox, VMware, Hyper-V, DNS, DHCP, PowerShell, Bash \\[3pt]
-Networking            & Cisco IOS, VLANs, Routing, Firewalls, VPN, TCP/IP, 3CX PBX \\[3pt]
-Tools                 & Agile / Scrum, Jira, Figma, ITIL basics \\
+Backend         & C\# / .NET, ASP.NET Core, Entity Framework Core, REST APIs, RabbitMQ, PostgreSQL, SQL Server \\[3pt]
+Frontend        & React, TypeScript, JavaScript \\[3pt]
+Observability   & OpenTelemetry, distributed tracing, structured logging \\[3pt]
+Infrastructure  & Linux, Proxmox, VMware, Hyper-V, Docker, Windows Server, Active Directory, PowerShell, Bash \\[3pt]
+Networking      & Cisco IOS, VLANs, inter-VLAN routing, firewalls, VPN, DNS/DHCP, 3CX PBX \\[3pt]
+Tools           & Git, CI/CD, Azure, Agile / Scrum \\
 \end{tabularx}
 
-% ═══════════════════════════════════════════════════════════% 
-% SOFT SKILLS
-% ═════════════════════════════════════════════════════════
-\section{Soft Skills}
-
-Problem-solving \;$\cdot$\; Team collaboration \;$\cdot$\; Communication \;$\cdot$\; Adaptability \;$\cdot$\; Time management \;$\cdot$\; Eager to learn 
-
-% ═════════════════════════════════════════════════════════% 
+% ═══════════════════════════════════════════════════════════
 % CERTIFICATIONS
 % ═══════════════════════════════════════════════════════════
 \section{Certifications}
@@ -174,7 +180,6 @@ Problem-solving \;$\cdot$\; Team collaboration \;$\cdot$\; Communication \;$\cdo
 % ═══════════════════════════════════════════════════════════
 \section{Languages}
 
-Dutch --- Native\\
-English --- Professional Working
+Dutch --- Native \quad English --- Professional Working
 
 \end{document}

@@ -1,0 +1,50 @@
+name: Build & Release CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.tex'
+      - 'assets/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile CV (EN)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: "Curriculum Vitae (EN).tex"
+
+      - name: Compile CV (NL)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: "Curriculum Vitae (NL).tex"
+
+      - name: Determine next version
+        id: version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          LATEST=$(gh release list --repo ${{ github.repository }} --limit 1 --json tagName --jq '.[0].tagName // "v0"' 2>/dev/null || echo "v0")
+          NUM=$(echo "$LATEST" | grep -oE '[0-9]+$' || echo "0")
+          echo "value=v$((NUM + 1))" >> $GITHUB_OUTPUT
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.value }}
+          name: "CV — ${{ steps.version.outputs.value }}"
+          make_latest: true
+          body: |
+            Built from commit ${{ github.sha }} on `${{ github.ref_name }}`.
+          files: |
+            Curriculum Vitae (EN).pdf
+            Curriculum Vitae (NL).pdf
