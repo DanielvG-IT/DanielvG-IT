@@ -18,15 +18,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile CV (EN)
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: "Curriculum Vitae (EN).tex"
-
-      - name: Compile CV (NL)
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: "Curriculum Vitae (NL).tex"
+      - name: Compile CVs
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/workspace" \
+            -w /workspace \
+            ghcr.io/xu-cheng/texlive-full:latest \
+            sh -c '
+              pdflatex -interaction=nonstopmode "Curriculum Vitae (EN).tex" &&
+              pdflatex -interaction=nonstopmode "Curriculum Vitae (NL).tex"
+            '
 
       - name: Determine next version
         id: version
