@@ -7,6 +7,13 @@ on:
       - '**.tex'
       - 'assets/**'
   workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options: [major, minor, patch]
 
 permissions:
   contents: write
@@ -35,9 +42,18 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          LATEST=$(gh release list --repo ${{ github.repository }} --limit 1 --json tagName --jq '.[0].tagName // "v0"' 2>/dev/null || echo "v0")
-          NUM=$(echo "$LATEST" | grep -oE '[0-9]+$' || echo "0")
-          echo "value=v$((NUM + 1))" >> $GITHUB_OUTPUT
+          LATEST=$(gh release list --repo ${{ github.repository }} --limit 1 --json tagName --jq '.[0].tagName // "v0.0.0"' 2>/dev/null || echo "v0.0.0")
+          VERSION=${LATEST#v}
+          MAJOR=$(echo "$VERSION" | cut -d. -f1)
+          MINOR=$(echo "$VERSION" | cut -d. -f2); MINOR=${MINOR:-0}
+          PATCH=$(echo "$VERSION" | cut -d. -f3); PATCH=${PATCH:-0}
+          BUMP=${{ inputs.bump || 'patch' }}
+          case "$BUMP" in
+            major) NEXT="v$((MAJOR+1)).0.0" ;;
+            minor) NEXT="v${MAJOR}.$((MINOR+1)).0" ;;
+            patch) NEXT="v${MAJOR}.${MINOR}.$((PATCH+1))" ;;
+          esac
+          echo "value=$NEXT" >> $GITHUB_OUTPUT
 
       - name: Release
         uses: softprops/action-gh-release@v2
